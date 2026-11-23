@@ -1,6 +1,12 @@
 # 🏛️ AetherMind Bare-Metal LLM Experimental Benchmark Laboratory
 ### *Open Empirical Evaluation of Micro-Scale to Titan Language Models (100M to 35B+) Across Full Quantization Grids (`IQ3_M`/`Q4_K_M` to `F16`/`BF16`) Under Zero-Shot Baseline vs. `Lambda-RLM` Recursive Metacognition & Formal AST/`pytest` Verification*
 
+> [!TIP]
+> ### 🚀 [ACESSAR PAINEL INTERATIVO RENDERIZADO (GITHUB PAGES)](https://juan3861.github.io/AetherMind-LLM-Benchmark-Lab/)
+> **Clique no link acima para abrir o dashboard web compilado e interativo com busca, camadas retráteis e métricas de todos os 132 modelos.**
+
+[![Live Web Dashboard](https://img.shields.io/badge/Live_Dashboard-GitHub_Pages_Interactive-success?style=for-the-badge&logo=github)](https://juan3861.github.io/AetherMind-LLM-Benchmark-Lab/)
+
 [![Hardware Testbed](https://img.shields.io/badge/Hardware-RX_580_8GB_Vulkan_%2B_Dual_Xeon_E5--2696_v4_AVX2-red?style=for-the-badge)](#2-hardware--software-testbed-specifications)
 [![Scale Coverage](https://img.shields.io/badge/Scale_Coverage-100M_to_35B%2B_Full_Cross--Scale_Lab-blue?style=for-the-badge)](#3-hall-of-fame--champions-by-every-weight-class-100m-to-35b)
 [![Cognitive Suite](https://img.shields.io/badge/Cognitive_Suite-13_Areas_%2F_39_Tests_%2B_10_Opus_Hard-emerald?style=for-the-badge)](#5-area-by-area-cognitive-decomposition-matrix-a01--a13-baseline--lambda-rlm)
