@@ -1,0 +1,637 @@
+{
+  "benchmark": "AetherMind Omega Breakthrough Arena v2.1 (Safety Governor Adaptive + KV Q8_0)",
+  "generated_at": "2026-11-27 14:36:02",
+  "governor_events": [
+    "[CAUTELA -> MODO LEVE] (Durante Boot) Pressao detectada (Commit=2.37GiB, RAM=10.62GiB, Jitter=0.4ms). Ativando MODO LEVE (-t 4, sem draft, pausa 0.35s) para preservar fluidez total do PC!",
+    "[DISJUNTOR CRITICO ANTI-TRAVAMENTO] (Durante Boot) Commit=1.52GiB, RAM=10.03GiB, Jitter=0.2ms! Suspendendo teste na hora e ativando MODO LEVE!"
+  ],
+  "models": {
+    "local_qwen3_8b_omega_spec": {
+      "id": "local_qwen3_8b_omega_spec",
+      "phase": "Frente 1 (Modelo Proprio + Speculative Draft + Omega-RLM v2)",
+      "name": "Qwen3-8B [Omega-Spec-Draft0.6B]",
+      "quant": "Q4_K_M",
+      "size_gb": 4.68,
+      "params": "8B",
+      "boot_seconds": 5.11,
+      "hardware_profile": "Cauteloso 10c Speculative (-t 10 -C 0x5555500 + Draft Qwen3-0.6B -td 4 mmap BELOW_NORMAL)",
+      "profiles_tested": [
+        {
+          "profile": "Cauteloso 10c Speculative (-t 10 -C 0x5555500 + Draft Qwen3-0.6B -td 4 mmap BELOW_NORMAL)",
+          "boot_ok": true,
+          "tg": 9.45,
+          "pp": 20.7,
+          "boot_s": 5.15
+        }
+      ],
+      "governor_light_mode": false,
+      "governor_events": [],
+      "pp_tok_s": 20.7,
+      "tg_tok_s": 9.45,
+      "norm_tg_tok_s": 6.01,
+      "lambda_raw_tg_tok_s": 5.96,
+      "lambda_wall_tps": 5.24,
+      "baseline_13_areas": 35,
+      "score_13_areas": 37,
+      "baseline_opus": 4,
+      "score_opus": 5,
+      "pts": 87,
+      "used_rlm": true,
+      "status": "COMPLETED",
+      "areas_detail": {
+        "01_reflexo_triagem": {
+          "name": "01. Reflexo / Triagem (Intenção e despacho ágil)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "02_engenharia_codigo": {
+          "name": "02. Engenharia de Código (Código, Refactor, Patches)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "03_matematica_provas": {
+          "name": "03. Matemática & Provas (Raciocínio formal e cálculo)",
+          "baseline_passed": 1,
+          "passed": 1,
+          "total": 3
+        },
+        "04_automacao_so_rpa": {
+          "name": "04. Automação de SO / RPA (Desktop, telas, janelas)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "05_memoria_perene": {
+          "name": "05. Memória Perene (Conhecimento contínuo e Grafo)",
+          "baseline_passed": 2,
+          "passed": 3,
+          "total": 3
+        },
+        "06_metacognicao": {
+          "name": "06. Metacognição (Auto-correção e estabilidade LTI)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "07_cadinho_redteam": {
+          "name": "07. Cadinho Red-Team (Fuzzing, segurança e auditoria)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "08_sintese_vocal": {
+          "name": "08. Síntese Vocal (Normalização fonética e prosódia TTS)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "09_multimodal_visao": {
+          "name": "09. Multimodal & Visão (Geometria de tela, SVG, OCR)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "10_planejamento_deliberativo": {
+          "name": "10. Planejamento Deliberativo (Planos encadeados e PDDL)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "11_raciocinio_cientifico": {
+          "name": "11. Raciocínio Científico (Física, Química, Engenharia)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "12_linguagem_discurso": {
+          "name": "12. Linguagem & Discurso (Coerência, síntese e lógica verbal)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "13_governador_hardware": {
+          "name": "13. Governador de Hardware (Clocks, temperaturas e VRAM)",
+          "baseline_passed": 2,
+          "passed": 3,
+          "total": 3
+        }
+      },
+      "opus_detail": {
+        "OPUS_01_regex_plus_star_dot": {
+          "name": "01. Motor Regex Puro com '.', '*' e '+' (Sem módulo re)",
+          "passed": false,
+          "result": "FAIL (Timeout excedido (8.0s) - provável loop infinito.)"
+        },
+        "OPUS_02_parser_unario_potencia_direita": {
+          "name": "02. Parser Algébrico Sem eval() c/ Unário e '^' Associativo à Direita",
+          "passed": false,
+          "result": "FAIL (Timeout excedido (8.0s) - provável loop infinito.)"
+        },
+        "OPUS_03_dijkstra_k_pedagios_gratis": {
+          "name": "03. Dijkstra 2D no Espaço de Estados (Até K Arestas Grátis)",
+          "passed": false,
+          "result": "FAIL (Timeout excedido (8.0s) - provável loop infinito.)"
+        },
+        "OPUS_04_maior_retangulo_matriz_binaria": {
+          "name": "04. Pilha Monotônica 2D: Maior Retângulo de 1s em Matriz",
+          "passed": true,
+          "result": "PASS (Baseline)"
+        },
+        "OPUS_05_bitmask_dp_tsp_aberto": {
+          "name": "05. Bitmask DP: Caminho Hamiltoniano Mínimo (TSP Aberto)",
+          "passed": true,
+          "result": "PASS (Omega-RLM v2)"
+        },
+        "OPUS_06_mediana_dois_arrays_ordenados": {
+          "name": "06. Busca Particionada: Mediana de Dois Arrays Ordenados",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[0]: assert float(mediana_ordenada([)"
+        },
+        "OPUS_07_maior_parenteses_valido_trap": {
+          "name": "07. DP/Pilha de Índices: Maior Substring de Parênteses Válidos",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[1]: assert maior_parenteses_valido()"
+        },
+        "OPUS_08_trapping_rain_water": {
+          "name": "08. Two-Pointers: Água da Chuva Retida entre Barras",
+          "passed": true,
+          "result": "PASS (Baseline)"
+        },
+        "OPUS_09_arvore_caminho_maximo_negativos": {
+          "name": "09. Árvore Binária: Maior Soma de Caminho Any-to-Any (c/ Negativos)",
+          "passed": true,
+          "result": "PASS (Baseline)"
+        },
+        "OPUS_10_solver_dpll_sat_cnf": {
+          "name": "10. Solver Lógico DPLL SAT para Fórmulas CNF",
+          "passed": true,
+          "result": "PASS (Baseline)"
+        }
+      },
+      "completed": true
+    },
+    "hf_parable_qwen3_8b_fable5_q5km": {
+      "id": "hf_parable_qwen3_8b_fable5_q5km",
+      "phase": "Frente 2 (Novo Destilado Fable-5 + Spec Draft)",
+      "name": "Parable-Qwen3-8B-Claude-Fable-5",
+      "quant": "Q5_K_M",
+      "size_gb": 5.45,
+      "params": "8B",
+      "boot_seconds": 6.44,
+      "hardware_profile": "Cauteloso 10c Speculative (-t 10 -C 0x5555500 + Draft Qwen3-0.6B -td 4 mmap BELOW_NORMAL)",
+      "profiles_tested": [
+        {
+          "profile": "Cauteloso 10c Speculative (-t 10 -C 0x5555500 + Draft Qwen3-0.6B -td 4 mmap BELOW_NORMAL)",
+          "boot_ok": true,
+          "tg": 9.01,
+          "pp": 16.7,
+          "boot_s": 11.35
+        }
+      ],
+      "governor_light_mode": false,
+      "governor_events": [],
+      "pp_tok_s": 16.7,
+      "tg_tok_s": 9.01,
+      "norm_tg_tok_s": 6.59,
+      "lambda_raw_tg_tok_s": 6.6,
+      "lambda_wall_tps": 4.6,
+      "baseline_13_areas": 35,
+      "score_13_areas": 37,
+      "baseline_opus": 2,
+      "score_opus": 3,
+      "pts": 67,
+      "used_rlm": true,
+      "status": "COMPLETED",
+      "areas_detail": {
+        "01_reflexo_triagem": {
+          "name": "01. Reflexo / Triagem (Intenção e despacho ágil)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "02_engenharia_codigo": {
+          "name": "02. Engenharia de Código (Código, Refactor, Patches)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "03_matematica_provas": {
+          "name": "03. Matemática & Provas (Raciocínio formal e cálculo)",
+          "baseline_passed": 2,
+          "passed": 2,
+          "total": 3
+        },
+        "04_automacao_so_rpa": {
+          "name": "04. Automação de SO / RPA (Desktop, telas, janelas)",
+          "baseline_passed": 2,
+          "passed": 3,
+          "total": 3
+        },
+        "05_memoria_perene": {
+          "name": "05. Memória Perene (Conhecimento contínuo e Grafo)",
+          "baseline_passed": 2,
+          "passed": 2,
+          "total": 3
+        },
+        "06_metacognicao": {
+          "name": "06. Metacognição (Auto-correção e estabilidade LTI)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "07_cadinho_redteam": {
+          "name": "07. Cadinho Red-Team (Fuzzing, segurança e auditoria)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "08_sintese_vocal": {
+          "name": "08. Síntese Vocal (Normalização fonética e prosódia TTS)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "09_multimodal_visao": {
+          "name": "09. Multimodal & Visão (Geometria de tela, SVG, OCR)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "10_planejamento_deliberativo": {
+          "name": "10. Planejamento Deliberativo (Planos encadeados e PDDL)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "11_raciocinio_cientifico": {
+          "name": "11. Raciocínio Científico (Física, Química, Engenharia)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "12_linguagem_discurso": {
+          "name": "12. Linguagem & Discurso (Coerência, síntese e lógica verbal)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "13_governador_hardware": {
+          "name": "13. Governador de Hardware (Clocks, temperaturas e VRAM)",
+          "baseline_passed": 2,
+          "passed": 3,
+          "total": 3
+        }
+      },
+      "opus_detail": {
+        "OPUS_01_regex_plus_star_dot": {
+          "name": "01. Motor Regex Puro com '.', '*' e '+' (Sem módulo re)",
+          "passed": false,
+          "result": "FAIL (Timeout excedido (8.0s) - provável loop infinito.)"
+        },
+        "OPUS_02_parser_unario_potencia_direita": {
+          "name": "02. Parser Algébrico Sem eval() c/ Unário e '^' Associativo à Direita",
+          "passed": false,
+          "result": "ERROR (timed out)"
+        },
+        "OPUS_03_dijkstra_k_pedagios_gratis": {
+          "name": "03. Dijkstra 2D no Espaço de Estados (Até K Arestas Grátis)",
+          "passed": false,
+          "result": "FAIL (Timeout excedido (8.0s) - provável loop infinito.)"
+        },
+        "OPUS_04_maior_retangulo_matriz_binaria": {
+          "name": "04. Pilha Monotônica 2D: Maior Retângulo de 1s em Matriz",
+          "passed": true,
+          "result": "PASS (Baseline)"
+        },
+        "OPUS_05_bitmask_dp_tsp_aberto": {
+          "name": "05. Bitmask DP: Caminho Hamiltoniano Mínimo (TSP Aberto)",
+          "passed": true,
+          "result": "PASS (Omega-RLM v2)"
+        },
+        "OPUS_06_mediana_dois_arrays_ordenados": {
+          "name": "06. Busca Particionada: Mediana de Dois Arrays Ordenados",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[1]: assert float(mediana_ordenada([)"
+        },
+        "OPUS_07_maior_parenteses_valido_trap": {
+          "name": "07. DP/Pilha de Índices: Maior Substring de Parênteses Válidos",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[1]: assert maior_parenteses_valido()"
+        },
+        "OPUS_08_trapping_rain_water": {
+          "name": "08. Two-Pointers: Água da Chuva Retida entre Barras",
+          "passed": true,
+          "result": "PASS (Baseline)"
+        },
+        "OPUS_09_arvore_caminho_maximo_negativos": {
+          "name": "09. Árvore Binária: Maior Soma de Caminho Any-to-Any (c/ Negativos)",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[2]: assert maior_caminho_arvore({'v)"
+        },
+        "OPUS_10_solver_dpll_sat_cnf": {
+          "name": "10. Solver Lógico DPLL SAT para Fórmulas CNF",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[0]: r1 = resolver_sat_cnf(2, [[1, 2)"
+        }
+      },
+      "completed": true
+    },
+    "hf_wukong_9b_opus_deepseek_i1_iq4xs": {
+      "id": "hf_wukong_9b_opus_deepseek_i1_iq4xs",
+      "phase": "Frente 2 (Novo SLERP 2xMerge + imatrix + Draft 0.8B)",
+      "name": "Wukong-9B-Qwen3.5-Claude-Opus-DeepSeek-SLERP-2xMerge",
+      "quant": "i1-IQ4_XS",
+      "size_gb": 5.02,
+      "params": "9B",
+      "boot_seconds": 9.51,
+      "hardware_profile": "MODO LEVE CPU (-t 4 -C 0x5500 --load-mode mmap --no-repack --poll 0 BELOW_NORMAL)",
+      "profiles_tested": [
+        {
+          "profile": "Cauteloso 10c Speculative (-t 10 -C 0x5555500 + Draft Qwen3.5-0.8B -td 4 mmap BELOW_NORMAL)",
+          "boot_ok": false,
+          "tg": 0.0,
+          "pp": 0.0
+        }
+      ],
+      "pp_tok_s": 10.8,
+      "tg_tok_s": 3.12,
+      "used_rlm": false,
+      "status": "SKIPPED_SLOW_UNDER_6_TPS",
+      "completed": true
+    },
+    "hf_qwen35_9b_defiant_fable_mtp_iq3m": {
+      "id": "hf_qwen35_9b_defiant_fable_mtp_iq3m",
+      "phase": "Frente 2 (Novo Fable + imatrix + MTP Nativo)",
+      "name": "Qwen3.5-9B-The-Defiant-Fable-NEO-IMATRIX-MAX-MTP",
+      "quant": "MTP-IQ3_M",
+      "size_gb": 5.33,
+      "params": "9B",
+      "boot_seconds": 10.2,
+      "hardware_profile": "Cauteloso 10c MTP Nativo (-t 10 -C 0x5555500 --load-mode mmap draft-mtp n=2 BELOW_NORMAL)",
+      "profiles_tested": [
+        {
+          "profile": "Cauteloso 10c MTP Nativo (-t 10 -C 0x5555500 --load-mode mmap draft-mtp n=2 BELOW_NORMAL)",
+          "boot_ok": true,
+          "tg": 2.58,
+          "pp": 15.74,
+          "boot_s": 10.29
+        },
+        {
+          "profile": "Cauteloso 10c CPU (-t 10 -C 0x5555500 --load-mode mmap + ngram-mod BELOW_NORMAL)",
+          "boot_ok": true,
+          "corrupted": true,
+          "tg": 0.0,
+          "pp": 0.0
+        }
+      ],
+      "pp_tok_s": 15.74,
+      "tg_tok_s": 2.58,
+      "used_rlm": false,
+      "status": "SKIPPED_SLOW_UNDER_6_TPS",
+      "completed": true
+    },
+    "hf_sentie_3b_6teachers_q5km": {
+      "id": "hf_sentie_3b_6teachers_q5km",
+      "phase": "Frente 2 (Multi-Destilado 6 Professores)",
+      "name": "Sentie1.0-3B-Claude-Fable5-GPT5.2-KimiK3-GLM5.2",
+      "quant": "Q5_K_M",
+      "size_gb": 2.63,
+      "params": "3B",
+      "boot_seconds": 6.52,
+      "hardware_profile": "Cauteloso 10c CPU (-t 10 -C 0x5555500 --load-mode mmap + ngram-mod BELOW_NORMAL)",
+      "profiles_tested": [
+        {
+          "profile": "Cauteloso 10c CPU (-t 10 -C 0x5555500 --load-mode mmap + ngram-mod BELOW_NORMAL)",
+          "boot_ok": true,
+          "tg": 4.15,
+          "pp": 9.16,
+          "boot_s": 9.44
+        }
+      ],
+      "pp_tok_s": 9.16,
+      "tg_tok_s": 4.15,
+      "used_rlm": false,
+      "status": "SKIPPED_SLOW_UNDER_6_TPS",
+      "completed": true
+    },
+    "hf_qwen3_14b_gpt52_iq4xs_spec": {
+      "id": "hf_qwen3_14b_gpt52_iq4xs_spec",
+      "phase": "Frente 2 (Resgate 14B GPT-5.2 imatrix + Spec Draft)",
+      "name": "Qwen3-14B-GPT-5.2-High-Reasoning-Distill",
+      "quant": "IQ4_XS",
+      "size_gb": 7.55,
+      "params": "14B",
+      "boot_seconds": 7.21,
+      "hardware_profile": "Cauteloso 10c Speculative (-t 10 -C 0x5555500 + Draft Qwen3-0.6B -td 4 mmap BELOW_NORMAL)",
+      "profiles_tested": [
+        {
+          "profile": "Cauteloso 10c Speculative (-t 10 -C 0x5555500 + Draft Qwen3-0.6B -td 4 mmap BELOW_NORMAL)",
+          "boot_ok": true,
+          "tg": 5.15,
+          "pp": 11.47,
+          "boot_s": 13.62
+        },
+        {
+          "profile": "Cauteloso 10c CPU (-t 10 -C 0x5555500 --load-mode mmap + ngram-mod BELOW_NORMAL)",
+          "boot_ok": true,
+          "tg": 4.61,
+          "pp": 11.24,
+          "boot_s": 6.32
+        }
+      ],
+      "pp_tok_s": 11.47,
+      "tg_tok_s": 5.15,
+      "used_rlm": false,
+      "status": "SKIPPED_SLOW_UNDER_6_TPS",
+      "completed": true
+    },
+    "local_qwen3_1_7b_omega_spec": {
+      "id": "local_qwen3_1_7b_omega_spec",
+      "phase": "Frente 1 (Modelo Proprio + Speculative Draft + Omega-RLM v2)",
+      "name": "Qwen3-1.7B [Omega-Spec]",
+      "quant": "Q4_K_M",
+      "size_gb": 1.19,
+      "params": "1.7B",
+      "boot_seconds": 2.93,
+      "hardware_profile": "MODO LEVE CPU (-t 4 -C 0x5500 --load-mode mmap --no-repack --poll 0 BELOW_NORMAL)",
+      "profiles_tested": [
+        {
+          "profile": "MODO LEVE CPU (-t 4 -C 0x5500 --load-mode mmap --no-repack --poll 0 BELOW_NORMAL)",
+          "boot_ok": true,
+          "tg": 11.36,
+          "pp": 34.39,
+          "boot_s": 3.32
+        }
+      ],
+      "governor_light_mode": true,
+      "governor_events": [
+        "[CAUTELA -> MODO LEVE] (Durante Boot) Pressao detectada (Commit=2.55GiB, RAM=9.49GiB, Jitter=0.5ms). Ativando MODO LEVE (-t 4, sem draft, pausa 0.35s) para preservar fluidez total do PC!"
+      ],
+      "pp_tok_s": 34.39,
+      "tg_tok_s": 11.41,
+      "norm_tg_tok_s": 11.41,
+      "lambda_raw_tg_tok_s": 14.52,
+      "lambda_wall_tps": 8.89,
+      "baseline_13_areas": 31,
+      "score_13_areas": 35,
+      "baseline_opus": 0,
+      "score_opus": 0,
+      "pts": 35,
+      "used_rlm": true,
+      "status": "COMPLETED",
+      "areas_detail": {
+        "01_reflexo_triagem": {
+          "name": "01. Reflexo / Triagem (Intenção e despacho ágil)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "02_engenharia_codigo": {
+          "name": "02. Engenharia de Código (Código, Refactor, Patches)",
+          "baseline_passed": 2,
+          "passed": 3,
+          "total": 3
+        },
+        "03_matematica_provas": {
+          "name": "03. Matemática & Provas (Raciocínio formal e cálculo)",
+          "baseline_passed": 1,
+          "passed": 1,
+          "total": 3
+        },
+        "04_automacao_so_rpa": {
+          "name": "04. Automação de SO / RPA (Desktop, telas, janelas)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "05_memoria_perene": {
+          "name": "05. Memória Perene (Conhecimento contínuo e Grafo)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "06_metacognicao": {
+          "name": "06. Metacognição (Auto-correção e estabilidade LTI)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "07_cadinho_redteam": {
+          "name": "07. Cadinho Red-Team (Fuzzing, segurança e auditoria)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "08_sintese_vocal": {
+          "name": "08. Síntese Vocal (Normalização fonética e prosódia TTS)",
+          "baseline_passed": 1,
+          "passed": 1,
+          "total": 3
+        },
+        "09_multimodal_visao": {
+          "name": "09. Multimodal & Visão (Geometria de tela, SVG, OCR)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "10_planejamento_deliberativo": {
+          "name": "10. Planejamento Deliberativo (Planos encadeados e PDDL)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "11_raciocinio_cientifico": {
+          "name": "11. Raciocínio Científico (Física, Química, Engenharia)",
+          "baseline_passed": 3,
+          "passed": 3,
+          "total": 3
+        },
+        "12_linguagem_discurso": {
+          "name": "12. Linguagem & Discurso (Coerência, síntese e lógica verbal)",
+          "baseline_passed": 2,
+          "passed": 3,
+          "total": 3
+        },
+        "13_governador_hardware": {
+          "name": "13. Governador de Hardware (Clocks, temperaturas e VRAM)",
+          "baseline_passed": 1,
+          "passed": 3,
+          "total": 3
+        }
+      },
+      "opus_detail": {
+        "OPUS_01_regex_plus_star_dot": {
+          "name": "01. Motor Regex Puro com '.', '*' e '+' (Sem módulo re)",
+          "passed": false,
+          "result": "FAIL (Timeout excedido (8.0s) - provável loop infinito.)"
+        },
+        "OPUS_02_parser_unario_potencia_direita": {
+          "name": "02. Parser Algébrico Sem eval() c/ Unário e '^' Associativo à Direita",
+          "passed": false,
+          "result": "FAIL (Timeout excedido (8.0s) - provável loop infinito.)"
+        },
+        "OPUS_03_dijkstra_k_pedagios_gratis": {
+          "name": "03. Dijkstra 2D no Espaço de Estados (Até K Arestas Grátis)",
+          "passed": false,
+          "result": "FAIL (Timeout excedido (8.0s) - provável loop infinito.)"
+        },
+        "OPUS_04_maior_retangulo_matriz_binaria": {
+          "name": "04. Pilha Monotônica 2D: Maior Retângulo de 1s em Matriz",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[0]: assert maior_retangulo_binario()"
+        },
+        "OPUS_05_bitmask_dp_tsp_aberto": {
+          "name": "05. Bitmask DP: Caminho Hamiltoniano Mínimo (TSP Aberto)",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[1]: assert tsp_aberto([[0, 10, 15, )"
+        },
+        "OPUS_06_mediana_dois_arrays_ordenados": {
+          "name": "06. Busca Particionada: Mediana de Dois Arrays Ordenados",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[1]: assert float(mediana_ordenada([)"
+        },
+        "OPUS_07_maior_parenteses_valido_trap": {
+          "name": "07. DP/Pilha de Índices: Maior Substring de Parênteses Válidos",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[1]: assert maior_parenteses_valido()"
+        },
+        "OPUS_08_trapping_rain_water": {
+          "name": "08. Two-Pointers: Água da Chuva Retida entre Barras",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[0]: assert agua_retida([0,1,0,2,1,0)"
+        },
+        "OPUS_09_arvore_caminho_maximo_negativos": {
+          "name": "09. Árvore Binária: Maior Soma de Caminho Any-to-Any (c/ Negativos)",
+          "passed": false,
+          "result": "FAIL (FAIL_ASSERTION[0]: assert maior_caminho_arvore({'v)"
+        },
+        "OPUS_10_solver_dpll_sat_cnf": {
+          "name": "10. Solver Lógico DPLL SAT para Fórmulas CNF",
+          "passed": false,
+          "result": "FAIL (RUNTIME_ERROR[0]: KeyError: -1)"
+        }
+      },
+      "completed": true
+    },
+    "local_antidoom_20b_omega_v2": {
+      "id": "local_antidoom_20b_omega_v2",
+      "phase": "Frente 1 (Modelo Proprio 20B + Omega-RLM v2 Cauteloso)",
+      "name": "gpt-oss-20b-antidoom [Omega-v2]",
+      "quant": "i1-IQ4_XS",
+      "size_gb": 11.27,
+      "params": "20B MoE",
+      "profiles_tested": [
+        {
+          "profile": "Cauteloso 10c mmap (-t 10 -C 0x5555500 --load-mode mmap + ngram-mod BELOW_NORMAL)",
+          "boot_ok": false,
+          "tg": 0.0,
+          "pp": 0.0
+        }
+      ],
+      "status": "SUSPENDED_OR_BOOT_FAILED",
+      "completed": false
+    }
+  }
+}
